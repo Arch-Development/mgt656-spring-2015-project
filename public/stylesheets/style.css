@@ -36,3 +36,7 @@ footer {
 #events-list {
   margin-top: 100px;
 }
+
+.event {
+  display: block;
+}
