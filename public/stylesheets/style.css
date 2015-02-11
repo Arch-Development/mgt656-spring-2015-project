@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   
 }
@@ -17,3 +17,22 @@ ul
 list-style-type: none;
 }
 
+li {
+  display: inline-block;
+}
+
+footer {
+  height: 100px;
+  background-color: transparent;
+  margin: auto;
+}
+
+
+
+#home-page-footer {
+  background-color: transparent;
+}
+
+#events-list {
+  margin-top: 100px;
+}

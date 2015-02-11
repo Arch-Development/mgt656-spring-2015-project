@@ -1,5 +1,32 @@
 {% extends "layout.html" %}
-
+{% block styles %}
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' />
+     <link rel='stylesheet' href='/stylesheets/cover.css' />
+ {% endblock %}
+     
+     
+{% block header %}
+      <header>
+        <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">
+                <ul>
+                <li><img id="logo" src="http://f.cl.ly/items/450y343g2T0C2511042j/logo.png"></li>
+                <li>GATSBY</li>
+                </h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/about">About</a></li>
+                  <li><a href="/events">Events</a></li>
+                  <li><a href="/events">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          </header>
+{% endblock %}
 {% block mainContent %}
 
   {% if errors %}

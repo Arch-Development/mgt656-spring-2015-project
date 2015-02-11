@@ -1,16 +1,46 @@
 {% extends "layout.html" %}
 
-  
-{% block header %}
-  <header>
-    <h1>{{ title }} FTW</h1>
-  </header>
-{% endblock %}
+{% block styles %}
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' />
+     <link rel='stylesheet' href='/stylesheets/cover.css' />
+ {% endblock %}
+     
+     
 
 {% block mainContent %}
+  
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          
+
+          <div class="inner cover">
+            <h1 class="cover-heading">EVENTS FOR THE PRETTY PEOPLE.</h1>
+            <p class="lead">In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars. And I like large parties. They’re so intimate. At small parties there isn’t any privacy.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+
+    </div>
   <p>
     Welcome to {{ title }}. {{tagline}}
   </p>
+  <p>Events you wished you were invited to attend:</p>
+  <div style="border: 1px solid black">
+   {% include "fragments/events-list.html" %}
+   </div>
   <p>
     Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
@@ -19,3 +49,4 @@
     <a id="new" href="/events/new">Create a new event</a>
   </p>
 {% endblock %}
+
