@@ -40,3 +40,23 @@ footer {
 .event {
   display: block;
 }
+
+#create-event {
+  margin-top: 100px;
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 300;
+  
+}
+
+
+
+#form-styling {
+  margin: auto;
+  height: 400px;
+  width: 500px;
+  
+  
+}
