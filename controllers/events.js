@@ -60,8 +60,62 @@ function saveEvent(request, response){
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
   }
+   if (validator.isInt(request.body.year) === false) {
+    contextData.errors.push('Year has to be an integer between 0 and 11.');
+  }
+  if (request.body.year >2016) {
+    contextData.errors.push('The Year has to be 2015 or 2016.');
+   }
+   if (request.body.year <2015) {
+    contextData.errors.push('The Year has to be 2015 or 2016.');
+   }
+  if (validator.isInt(request.body.month) === false) {
+    contextData.errors.push('Month has to be an integer between 0 and 11.');
+  }
+  if (request.body.month < 0) {
+    contextData.errors.push('Month has to be an integer between 0 and 11.');
+  }
+  if (request.body.month >11) {
+    contextData.errors.push('Month has to be an integer between 0 and 11.');
+  } 
+   if (validator.isInt(request.body.day) === false) {
+    contextData.errors.push('day has to be an integer between 1 and 31.');
+  }
+  if (request.body.day <1) {
+    contextData.errors.push('day has to be an integer between 1 and 31.');
+  }
+  if (request.body.day >31) {
+    contextData.errors.push('day has to be an integer between 1 and 31.');  
+  }  
+   if (validator.isInt(request.body.hour) === false) {
+    contextData.errors.push('hour has to be an integer between 0 and 23.');
+   }
+  if (request.body.hour <0) {
+    contextData.errors.push('hour has to be an integer between 0 and 23.');
+  }
+  if (request.body.hour >23) {
+    contextData.errors.push('hour has to be an integer between 0 and 23.');  
+  }  
+   if (validator.isInt(request.body.minute) === false) {
+    contextData.errors.push('minute has to be an integer between 0 and 59.');
+   }
+  if (request.body.hour <0) {
+    contextData.errors.push('minute has to be an integer between 0 and 59.');
+  }
+  if (request.body.hour >59) {
+    contextData.errors.push('minute has to be an integer between 0 and 59.');  
+  }  
 
-
+  if (validator.isURL(request.body.image) === false) {
+    contextData.errors.push('image has to be a .gif or .png and a valid URL.');
+   }
+  if (validator.contains(request.body.image,".gif") === false) {
+    contextData.errors.push('image has to be a .gif or .png and a valid URL.');
+   }
+  if (validator.contains(request.body.image,".png") === false) {
+    contextData.errors.push('image has to be a .gif or .png and a valid URL.');
+   }  
+  
   if (contextData.errors.length === 0) {
     var newEvent = {
       title: request.body.title,
@@ -99,7 +153,6 @@ function rsvp (request, response){
     contextData.errors.push('Invalid email');
     response.render('event-detail.html', contextData);    
   }
-
 }
 
 /**
